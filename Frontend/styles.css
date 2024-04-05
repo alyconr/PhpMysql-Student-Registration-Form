@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: #413535;
+  text-align: center;
+}
+
+form {
+  border: 6px solid #f1f1f1;
+  width: 80%;
+  margin: auto;
+}
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 5%;
+  height: auto;
+  margin-bottom: 15px;
+ 
+}
+
+input[type=text],
+input[type=password] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: left;
+  margin: 24px 0 24px 0;
+}
+
+img.avatar {
+  width: 100px;
+  border-radius: 200px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.container-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+table {
+  width: 80%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  margin-bottom: 20px;
+
+}
+
+th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 20%;
+  background-color: #b3b1b1;
+
+}
+
+td, .td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 20%;
+  background-color: #94d8d3;
+  color: #000000;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+  gap: 10px;
+}
+
+.action-buttons .edit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+.action-buttons .delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 16px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}

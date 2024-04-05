@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  
+  Public:
+        container_name: webcontainer
+        build:
+            context: ./Public
+            dockerfile: Dockerfile
+        image: webcontainer
+        ports:
+             - 80:80
+        depends_on:
+             - DB
+        networks:
+             - mywebsql
+
+  DB:
+        container_name: mysql_container
+        build:
+            context: ./DB
+            dockerfile: Dockerfile
+        image: mysql_container
+        ports:
+            - 3307:3306
+        volumes:
+            - ./DB:/var/lib/mysql_data
+        networks:
+            - mywebsql
+
+networks:
+  mywebsql:
+    driver: bridge

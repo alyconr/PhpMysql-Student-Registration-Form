@@ -4,10 +4,8 @@ RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
 WORKDIR /var/www/html
 
-COPY ../Frontend/ .
-COPY ../Backend/ .
-
-
+COPY . .
+COPY ./Backend .
 
 EXPOSE 80
 

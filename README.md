@@ -7,7 +7,7 @@ The PHP Student Registration App is a web-based application designed to facilita
 
 This application provides an unique and engaging user experience by utilizing Docker containers, Dockerfiles, Docker volumes, Docker networks, and ports.
 
-In addition to its functional aspects, the PHP Student Registration App serves as a hands-on learning tool for understanding containerization with Docker. By employing Docker containers, Dockerfiles, and associated Docker functionalities, learners gain practical insights into managing dependencies, scaling applications, and orchestrating components effectively within a containerized environment.
+In addition to its functional aspects, the PHP Student Registration App serves as a hands-on learning tool for understanding php's application lifecycle and containerization with Docker. By employing Docker containers, Dockerfiles, and associated Docker functionalities, learners gain practical insights into managing dependencies, scaling applications, and orchestrating components effectively within a containerized environment.
 ## Table of Contents
 
 1. [Features](#features)

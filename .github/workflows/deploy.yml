@@ -1,0 +1,32 @@
+name: Deploy Docker Compose
+
+on:
+  push:
+    branches:
+      - main  # o la rama que uses para producción
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 📦 Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: 🚀 Copy files to server
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "mkdir -p ~/app"
+          rsync -avz --exclude '.git' ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/app/
+
+      - name: 🐳 Deploy with Docker Compose
+        run: |
+          ssh ${{    }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd ~/app
+            docker compose down
+            docker compose up -d --build
+          EOF

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h2> SENA's Student Registration Form </h2>
+  <h2> FORMULARIO DE REGISTRO SENA </h2>
   <img class="logo" src="logoSena.png" alt="Logo Sena">
   <form action="index.php" method="POST">
 
